@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FP Luis Suñer Sanchis - Bolsa de Empresas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-container">
+        <!-- Header con imagen de fondo -->
+        <header class="main-header" style="background-image: url('imagenes/logo-cabecera.png');">
+            <div class="header-overlay">
+                <div class="institutional-header">
+                    <div class="logo-left">
+                        <!-- Espacio para logos -->
+                    </div>
+                    <div class="title-center">
+                        <h1 class="main-title">CENTRE INTEGRAT PÚBLIC<br>FORMACIÓ PROFESSIONAL<br>LUÍS SUNER SANCHIS</h1>
+                    </div>
+                    <div class="logo-right">
+                        <!-- Espacio para logos -->
+                    </div>
+                </div>
+                <div class="sub-header">
+                    <span class="generalitat">GENERALITAT VALENCIANA</span>
+                    <span class="eu-flag">Unió Europea · Fons Social Europeu · El FSE inverteix en el teu futur</span>
+                </div>
+            </div>
+        </header>
+
+        
+        <!-- Contenido principal -->
+        <main class="welcome-content">
+            <!-- Botón para ir a vista de empresas -->
+            <div class="nav-buttons">
+                <a href="vista.html" class="nav-btn ver-empresas-btn">
+                    <span>📋</span>
+                    Ver empresas guardadas
+                </a>
+            </div>
+
+        <!-- Contenido principal de bienvenida -->
+        <main class="welcome-content">
+           
+        <!-- CUESTIONARIO - FORMULARIO PARA EMPRESAS -->
+        <div class="form-section" id="formulario">
+            <div class="form-container">
+                <h2 class="form-title">Registro de Empresas de Prácticas</h2>
+                <p class="form-subtitle">Completa los datos de la empresa donde realizaste tus prácticas</p>
+                
+                <form id="empresaForm" class="empresa-form">
+                    <!-- Datos del Alumno -->
+                    <div class="form-group">
+                        <h3 class="form-group-title">Datos del Alumno</h3>
+                            <div class="form-field">
+                                <label for="nombreAlumno">Nombre completo *</label>
+                                <input type="text" id="nombreAlumno" name="nombreAlumno" required>
+                        </div>
+                                <label for="anoAcademico">Año académico *</label>
+                                <select id="anoAcademico" name="anoAcademico" required>
+                                    <option value="">Selecciona un año</option>
+                                    <option value="2023-2024">2023-2024</option>
+                                    <option value="2024-2025">2024-2025</option>
+                                    <option value="2025-2026">2025-2026</option>
+                                    <option value="2025-2026">2026-2027</option>
+                                    <option value="2025-2026">2027-2028</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Datos de la Formación -->
+                    <div class="form-group">
+                        <h3 class="form-group-title">🎓 Datos de la Formación</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="nivelFP">Nivel de FP *</label>
+                                <select id="nivelFP" name="nivelFP" required>
+                                    <option value="">Selecciona un nivel</option>
+                                    <option value="basica">FP Básica</option>
+                                    <option value="medio">Grado Medio</option>
+                                    <option value="superior">Grado Superior</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="ciclo">Ciclo Formativo *</label>
+                                <select id="ciclo" name="ciclo" required>
+                                    <option value="">Primero selecciona el nivel</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="curso">Curso *</label>
+                                <select id="curso" name="curso" required>
+                                    <option value="">Selecciona un curso</option>
+                                    <option value="1">1º Curso</option>
+                                    <option value="2">2º Curso</option>
+                                </select>
+                    </div>
+
+                    <!-- Datos del Instituto -->
+                    <div class="form-group">
+                        <h3 class="form-group-title">Datos del Instituto</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="tutorInstituto">Tutor/a del instituto *</label>
+                                <input type="text" id="tutorInstituto" name="tutorInstituto" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="departamento">Departamento *</label>
+                                <input type="text" id="departamento" name="departamento" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="emailTutor">Email del tutor/a *</label>
+                                <input type="email" id="emailTutor" name="emailTutor" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="telefonoTutor">Teléfono del tutor/a</label>
+                                <input type="tel" id="telefonoTutor" name="telefonoTutor">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Datos de la Empresa -->
+                    <div class="form-group">
+                        <h3 class="form-group-title">Datos de la Empresa</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="nombreEmpresa">Nombre de la empresa *</label>
+                                <input type="text" id="nombreEmpresa" name="nombreEmpresa" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="cifEmpresa">CIF/NIF de la empresa *</label>
+                                <input type="text" id="cifEmpresa" name="cifEmpresa" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="direccionEmpresa">Dirección *</label>
+                                <input type="text" id="direccionEmpresa" name="direccionEmpresa" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="poblacionEmpresa">Población *</label>
+                                <input type="text" id="poblacionEmpresa" name="poblacionEmpresa" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="provinciaEmpresa">Provincia *</label>
+                                <input type="text" id="provinciaEmpresa" name="provinciaEmpresa" value="Valencia" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="codigoPostal">Código Postal *</label>
+                                <input type="text" id="codigoPostal" name="codigoPostal" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="telefonoEmpresa">Teléfono empresa *</label>
+                                <input type="tel" id="telefonoEmpresa" name="telefonoEmpresa" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="emailEmpresa">Email empresa *</label>
+                                <input type="email" id="emailEmpresa" name="emailEmpresa" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="webEmpresa">Web empresa</label>
+                                <input type="url" id="webEmpresa" name="webEmpresa" placeholder="https://">
+                            </div>
+                            <div class="form-field">
+                                <label for="sectorEmpresa">Sector de actividad *</label>
+                                <input type="text" id="sectorEmpresa" name="sectorEmpresa" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Datos del Tutor de Empresa -->
+                    <div class="form-group">
+                        <h3 class="form-group-title">Datos del Tutor de Empresa</h3>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="nombreTutorEmpresa">Nombre del tutor/a *</label>
+                                <input type="text" id="nombreTutorEmpresa" name="nombreTutorEmpresa" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="cargoTutorEmpresa">Cargo/Puesto *</label>
+                                <input type="text" id="cargoTutorEmpresa" name="cargoTutorEmpresa" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="emailTutorEmpresa">Email tutor/a *</label>
+                                <input type="email" id="emailTutorEmpresa" name="emailTutorEmpresa" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="telefonoTutorEmpresa">Teléfono tutor/a *</label>
+                                <input type="tel" id="telefonoTutorEmpresa" name="telefonoTutorEmpresa" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="submit-btn">Enviar información de la empresa</button>
+                        <button type="reset" class="reset-btn">Limpiar formulario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+   </main>
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-text">©Centro Integrado Público Formación Profesional Luís Suñer Sanchis - Alzira</p>
+                    <p class="footer-contact">C/ Luis Suñer, 1 · 46600 Alzira · Valencia</p>
+                </div>
+                <div class="footer-links">
+                    <span class="footer-link">Contacto</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>

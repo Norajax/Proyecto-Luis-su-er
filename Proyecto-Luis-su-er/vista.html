@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FP Luis Suñer Sanchis - Ver Empresas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-container">
+        <!-- Header con imagen de fondo -->
+        <header class="main-header" style="background-image: url('imagenes/logo-cabecera.png');">
+            <div class="header-overlay">
+                <div class="institutional-header">
+                    <div class="logo-left">
+                        <!-- Espacio para logos -->
+                    </div>
+                    <div class="title-center">
+                        <h1 class="main-title">CENTRE INTEGRAT PÚBLIC<br>FORMACIÓ PROFESSIONAL<br>LUÍS SUNER SANCHIS</h1>
+                    </div>
+                    <div class="logo-right">
+                        <!-- Espacio para logos -->
+                    </div>
+                </div>
+                <div class="sub-header">
+                    <span class="generalitat">GENERALITAT VALENCIANA</span>
+                    <span class="eu-flag">Unió Europea · Fons Social Europeu · El FSE inverteix en el teu futur</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Contenido principal -->
+        <main class="welcome-content">
+            <!-- Botón para volver al formulario -->
+            <div class="nav-buttons">
+                <a href="formulario.html" class="nav-btn volver-btn">
+                    <span>←</span>
+                    Volver al formulario
+                </a>
+            </div>
+
+            <!-- SECCIÓN DE VISUALIZACIÓN DE EMPRESAS -->
+            <div class="vista-section">
+                <div class="vista-container">
+                    <div class="vista-header">
+                        <h2 class="vista-title">Empresas de Prácticas</h2>
+                        <p class="vista-subtitle">Visualiza las empresas registradas por ciclo y curso</p>
+                    </div>
+                    
+                    <!-- Panel de filtros -->
+                    <div class="filtros-panel">
+                        <h3 class="filtros-titulo">🔍 Filtrar empresas</h3>
+                        <div class="filtros-container">
+                            <div class="filtro-grupo">
+                                <label for="filtroNivel">Nivel FP:</label>
+                                <select id="filtroNivel">
+                                    <option value="">Todos los niveles</option>
+                                    <option value="basica">FP Básica</option>
+                                    <option value="medio">Grado Medio</option>
+                                    <option value="superior">Grado Superior</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filtro-grupo">
+                                <label for="filtroCiclo">Ciclo:</label>
+                                <select id="filtroCiclo">
+                                    <option value="">Todos los ciclos</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filtro-grupo">
+                                <label for="filtroCurso">Curso:</label>
+                                <select id="filtroCurso">
+                                    <option value="">Todos los cursos</option>
+                                    <option value="1">1º Curso</option>
+                                    <option value="2">2º Curso</option>
+                                </select>
+                            </div>
+                            
+                            <button id="btnAplicarFiltros" class="filtro-btn">Aplicar filtros</button>
+                            <button id="btnLimpiarFiltros" class="limpiar-filtros-btn">Limpiar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Contenedor de empresas -->
+                    <div id="empresasContainer" class="empresas-container">
+                        <div class="sin-empresas">
+                            <p>📋 Selecciona los filtros para ver las empresas registradas</p>
+                        </div>
+                    </div>
+
+                    <!-- Estadísticas -->
+                    <div id="estadisticasContainer" class="estadisticas-container">
+                        <!-- Se llenará con JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p class="footer-text">© Centro Integrado Público Formación Profesional Luís Suñer Sanchis - Alzira</p>
+                    <p class="footer-contact">C/ Luis Suñer, 1 · 46600 Alzira · Valencia</p>
+                </div>
+                <div class="footer-links">
+                    <a href="formulario.html" class="footer-link">Registrar empresa</a>
+                    <span class="footer-link">Contacto</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="vista.js"></script>
+</body>
+</html>
