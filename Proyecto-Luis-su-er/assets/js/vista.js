@@ -187,7 +187,7 @@ class VisualizadorEmpresas {
         });
     }
 
-    // NUEVO: Mostrar empresas en formato TABLA
+    // Mostrar empresas en formato TABLA
     mostrarTablaEmpresas(empresas) {
         const container = document.getElementById('empresasContainer');
         
