@@ -91,7 +91,43 @@ class VisualizadorEmpresas {
                     emailTutorEmpresa: "javier@telecomunicaciones.es",
                     fechaRegistro: "10/06/2024"
                 }
-            ];
+            ];// Funcionalidad para mostrar/ocultar contacto en el footer
+document.addEventListener('DOMContentLoaded', function() {
+    const contactoBtn = document.getElementById('contactoFooterBtn');
+    const contactoPanel = document.getElementById('contactoPanel');
+    const cerrarBtn = document.getElementById('cerrarContactoBtn');
+    
+    if (contactoBtn && contactoPanel) {
+        contactoBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (contactoPanel.style.display === 'none' || contactoPanel.style.display === '') {
+                contactoPanel.style.display = 'block';
+                contactoBtn.innerHTML = 'Contacto ✕';
+            } else {
+                contactoPanel.style.display = 'none';
+                contactoBtn.innerHTML = 'Contacto';
+            }
+        });
+        
+        if (cerrarBtn) {
+            cerrarBtn.addEventListener('click', function() {
+                contactoPanel.style.display = 'none';
+                contactoBtn.innerHTML = 'Contacto';
+            });
+        }
+        
+        // Cerrar al hacer clic fuera (opcional)
+        document.addEventListener('click', function(event) {
+            if (!contactoPanel.contains(event.target) && 
+                !contactoBtn.contains(event.target) && 
+                contactoPanel.style.display === 'block') {
+                contactoPanel.style.display = 'none';
+                contactoBtn.innerHTML = 'Contacto';
+            }
+        });
+    }
+});
             
             localStorage.setItem('empresasPracticas', JSON.stringify(ejemplos));
             return ejemplos;
@@ -306,4 +342,45 @@ class VisualizadorEmpresas {
 // Inicializar
 document.addEventListener('DOMContentLoaded', () => {
     new VisualizadorEmpresas();
+
+// Funcionalidad para mostrar/ocultar contacto en el footer
+document.addEventListener('DOMContentLoaded', function() {
+    const contactoBtn = document.getElementById('contactoFooterBtn');
+    const contactoPanel = document.getElementById('contactoPanel');
+    const cerrarBtn = document.getElementById('cerrarContactoBtn');
+    
+    if (contactoBtn && contactoPanel) {
+        contactoBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            if (contactoPanel.style.display === 'none' || contactoPanel.style.display === '') {
+                contactoPanel.style.display = 'block';
+                contactoBtn.innerHTML = 'Contacto ✕';
+            } else {
+                contactoPanel.style.display = 'none';
+                contactoBtn.innerHTML = 'Contacto';
+            }
+        });
+        
+        if (cerrarBtn) {
+            cerrarBtn.addEventListener('click', function() {
+                contactoPanel.style.display = 'none';
+                contactoBtn.innerHTML = 'Contacto';
+            });
+        }
+        
+        // Cerrar al hacer clic fuera (opcional)
+        document.addEventListener('click', function(event) {
+            if (!contactoPanel.contains(event.target) && 
+                !contactoBtn.contains(event.target) && 
+                contactoPanel.style.display === 'block') {
+                contactoPanel.style.display = 'none';
+                contactoBtn.innerHTML = 'Contacto';
+            }
+        });
+    }
+});
+
+
+
 });

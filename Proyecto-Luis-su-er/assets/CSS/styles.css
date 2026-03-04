@@ -950,7 +950,7 @@ body {
 .separador {
     border: 0;
     height: 3px;
-    background: linear-gradient(80deg, #8B1E1E, #8B1E1E, transparent);
+    background: linear-gradient(80deg, #8B1E1E, #8B1E1E);
     margin: 30px 0 30px 0;
     width: 100%;
 }
@@ -1013,4 +1013,27 @@ body {
     .header-overlay {
         min-height: 180px;
     }
+}
+
+/* Contenedor para botones alineados horizontalmente */
+.nav-buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; 
+    align-items: center;
+    flex-wrap: wrap; 
+    margin-bottom: 30px;
+}
+
+.nav-buttons {
+    margin-bottom: 0; 
+}
+
+.nav-buttons {
+    flex: 1;
+}
+
+.nav-btn {
+    width: 100%;
+    justify-content: center;
 }
